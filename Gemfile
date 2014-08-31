@@ -5,6 +5,9 @@ gem 'rails', '4.0.4'
 gem 'jquery-rails'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
+group :development, :test do
+  gem "sqlite3"
+end
 group :production do
   gem "pg"
 end
