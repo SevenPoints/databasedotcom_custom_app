@@ -27,6 +27,13 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     builder (3.1.4)
+    coffee-rails (4.0.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.3.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.8.0)
     databasedotcom (1.3.2)
       activesupport
       json
@@ -34,6 +41,7 @@ GEM
     databasedotcom-rails (1.1.0)
       databasedotcom
     erubis (2.7.0)
+    execjs (2.2.1)
     hike (1.2.3)
     i18n (0.6.11)
     jquery-rails (3.1.1)
@@ -82,6 +90,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (2.3.0)
+      coffee-rails
     tzinfo (0.3.41)
 
 PLATFORMS
@@ -94,3 +104,4 @@ DEPENDENCIES
   pg
   rails (= 4.0.4)
   sqlite3
+  turbolinks
