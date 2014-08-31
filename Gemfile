@@ -4,8 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
-gem 'heroku'
-
+group :production do
+  gem "pg"
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
