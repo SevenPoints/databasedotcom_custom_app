@@ -6,6 +6,7 @@ gem 'jquery-rails', '~> 3.1.0'
 gem 'turbolinks'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
+gem 'uglifier'
 group :development, :test do
   gem "sqlite3"
 end
