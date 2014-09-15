@@ -1,0 +1,10 @@
+<h1>Account <%= @account.Name %></h1>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
+<br/>
+<br/>
+
+<% @account.attributes.each do |a| %>
+    <%= a[0] %>: <%= a[1] %><br/>
+<% end %>

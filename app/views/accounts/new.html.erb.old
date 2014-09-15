@@ -1,0 +1,19 @@
+<%= form_for(@account) do |form| %>
+   <% Account.attributes.select {|a| Account.updateable?(a)}.each do |attr| %>
+        <field>
+            <%= form.label attr, Account.label_for(attr) %>
+            <% case Account.field_type(attr) %>
+                <% when "boolean" %>
+                    <%= form.check_box attr %>
+                <% when "multipicklist" %>
+                <% when "picklist" %>
+                    <% puts "Rendering picklist for #{attr}, value is #{@account[attr]}, type is #{Account.field_type(attr)}"%>
+                    <%= form.select attr, Account.picklist_values(attr).collect {|p| [p["label"], p["value"]]}, :multiple => (Account.field_type(attr) == "multipicklist") %>
+                <% else %>
+                    <%= form.text_field attr%>
+            <% end %>
+        </field>
+        <br>
+    <% end %>
+    <%= form.submit %>
+<% end %>

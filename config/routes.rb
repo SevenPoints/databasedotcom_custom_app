@@ -1,4 +1,22 @@
 SampleSfdcApp::Application.routes.draw do
+  resources :merchandise__c, :path => '/merchandise',:controller => "merchandise"
+  resources :merchandise__cs, :path => '/merchandise',:controller => "merchandise"
+  resources :merchandise
+  get "merchandise/index"
+  get "merchandise/create"
+  get "merchandise/show"
+  get "merchandise/edit"
+  get "merchandise/update"
+  
+  resources :accounts
+  
+
+  resources :users
+  get "user/index"
+  get "user/new"
+  get "user/create"
+  root :to => "accounts#index"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

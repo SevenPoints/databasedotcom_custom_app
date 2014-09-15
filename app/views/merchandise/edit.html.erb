@@ -1,0 +1,30 @@
+<h1>Update Merchandise</h1>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %><br/><br/>
+<% end %>
+
+<%= form_for(@merchandise, format: :json) do |f| %>
+    <div class="field">
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name%>
+    </div>
+
+    <div class="field">
+        <%= f.label "Quantity" %>
+        <%= f.number_field :Quantity__c %>
+    </div>
+
+	<div class="field">
+        <%= f.label "Price" %>
+        <%= f.number_field :Price__c %>
+    </div>
+
+    <div class="actions">
+        <%= f.button "Submit",:name=>"Content-Type",:value=>"application/json"%>
+    </div>
+<% end %>
+
+<br/>
+
+<%= link_to 'Back', merchandise_path %>

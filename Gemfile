@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 gem 'jquery-rails', '~> 3.1.0'
@@ -7,6 +7,7 @@ gem 'turbolinks'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
 gem 'uglifier'
+gem 'rails_12factor'
 group :development, :test do
   gem "sqlite3"
 end

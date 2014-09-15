@@ -1,0 +1,13 @@
+<h1>Merchandise: <%= @merchandise.Name %></h1>
+<% if flash[:notice] %>
+  <%= flash[:notice] %><br/><br/>
+<% end %>
+
+<%= link_to 'Edit', edit_merchandise_path(@merchandise) %> |
+<%= link_to 'List', merchandise_index_path %>
+<br/>
+<br/>
+
+<% @merchandise.attributes.each do |a| %>
+    <%= a[0] %>: <%= a[1] %><br/>
+<% end %>

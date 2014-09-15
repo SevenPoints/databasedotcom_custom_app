@@ -1,0 +1,23 @@
+<h1>Update Account</h1>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %><br/><br/>
+<% end %>
+
+<%= form_for @account do |f| %>
+    <div class="field">
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name%>
+    </div>
+    <div class="field">
+        <%= f.label "Type" %>
+        <%= f.select :Type, options_for_select([['Prospect', 'Prospect'], ['Store', 'Store'], ['Other','Other']]) %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+
+<br/>
+
+<%= link_to 'Back', accounts_path %>

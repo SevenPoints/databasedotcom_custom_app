@@ -1,0 +1,11 @@
+<h1>Merchandise Listing</h1>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %><br/><br/>
+<% end %>
+<ul>
+	<% @merchandise.each do |m|%>
+	<li><%= link_to "#{m.Name}", m%> (<%=link_to "Edit", edit_merchandise_path(m) %>)</li>
+	
+	<%end%>
+</ul>
